@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="../imagenes/images.png">
+  <meta charset="UTF-8">
+  <title>Módulo I TPROG</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+  <header>
+    <h1>Módulo I: Desarrolla software de aplicación con programación estructurada</h1>
+    <nav>
+      <ul>
+        <li><button onclick="mostrarSeccion('algoritmos')">Algoritmos</button></li>
+        <li><button onclick="mostrarSeccion('estructuras-control')">Estructuras de Control</button></li>
+        <li><button onclick="mostrarSeccion('estructuras-datos')">Estructuras de Datos</button></li>
+      </ul>
+    </nav>
+ 
+  </header><br><br>
+  <center>
+    <img id="imagen" src="../imagenes/cecycerro2-removebg-preview.png" style="width: 400px;">
+</center>
+  <main>
+    <section id="algoritmos" class="seccion">
+      <h2>Construye algoritmos para la solución de problemas</h2>
+      <p>Un algoritmo es un conjunto de instrucciones paso a paso que permiten resolver un problema. Se pueden representar con pseudocódigo o diagramas de flujo.</p>
+      <ul>
+        <li>Identificación del problema</li>
+        <li>Diseño del algoritmo</li>
+        <li>Representación gráfica o textual</li>
+        <li>Pruebas y depuración</li>
+      </ul>
+      <h2>Etapas para construir un algoritmo:</h2>
+      
+      <ul>
+        <li> Entemder el problema: Definir claramente qué se quiere resolver.
+            Analizar entradas y salidas: ¿Qué datos necesita? ¿Qué se espera obtener?</li>
+        <li>Diseñar el algoritmo: </li>
+        <li>Diagrama de flujo: Representa gráficamente el proceso paso a paso usando símbolos.</li>
+        <li>Pseudocódigo: Representa el algoritmo en forma textual, similar al lenguaje humano.</li>
+        <li>Probar el algoritmo: Antes de programar, pruébalo con valores reales para ver si funciona correctamente.</li>
+        <li>Optimizarlo: Después de que funcione, puedes:
+
+            <br><br>-Simplificar operaciones.
+            
+            <br><br>-Usar variables eficientes.
+            
+            <br><br>-Eliminar pasos innecesarios.</li>
+      </ul>
+      <center>
+      <img id="imagen" src="../imagenes/cecycerro2-removebg-preview.png" style="width: 200px;">
+    </center>
+    </section>
+
+    <section id="estructuras-control" class="seccion" style="display: none;">
+      <h2>Aplica estructuras de control con un lenguaje de programación</h2>
+      <p>Las estructuras de control permiten tomar decisiones y repetir instrucciones en un programa. Los más comunes son:</p>
+      <ul>
+        <li>Condicionales (if, else, switch): Un condicional simple es una estructura de control que<br> ejecuta un conjunto de líneas de código si es cierta una expresión booleana.
+        <br>A un condicional simple se le puede añadir la cláusula else para especificar qué lineas de código se quieren ejecutar si la expresión booleana es falsa. </li><br>
+        <li>Bucles (for, while): For
+            <br>Cuando se sabe o se puede saber el número de repeticiones
+            While
+            <br>Cuando no se sabe el número de repeticiones
+            Do While
+            <br>Cuando no se sabe el número de repeticiones, pero se debe realizar al menos una vez
+            </li><br>
+        <li>Control de flujo: Las estructuras de control de flujo son conjuntos de instrucciones que determinan el orden de ejecución de un programa.<br>
+             Permiten que el código avance secuencialmente, tome decisiones o repita acciones. </li>
+      </ul>
+      <center>
+        <img id="imagen" src="../imagenes/cecycerro2-removebg-preview.png" style="width: 200px;">
+      </center>
+    </section>
+
+    <section id="estructuras-datos" class="seccion" style="display: none;">
+      <h2>Aplica estructuras de datos con un lenguaje de programación</h2>
+      <p>Las estructuras de datos son formas organizadas de almacenar y gestionar la información para que pueda ser utilizada de forma eficiente dentro de un programa.<br>
+         Aplicarlas correctamente permite que el software sea más ágil, ordenado y fácil de mantener.</p>
+      <ul>
+        <li>Arreglos o listas: Permiten almacenar varios datos del mismo tipo bajo un mismo nombre, y se accede a cada uno mediante un índice.<br>
+             Se usan, por ejemplo, para manejar listas de números, nombres o calificaciones.</li><br>
+        <li>Pilas y colas</li>
+        <li>Diccionarios o mapas: Son estructuras más avanzadas. La pila funciona bajo el principio de “el último en entrar, primero en salir”,<br>
+             y la cola funciona como “el primero en entrar, primero en salir”. Se usan para controlar secuencias, como procesos en espera o historial de acciones.</li><br>
+        <li>Listas enlazadas: Son colecciones ordenadas de elementos que pueden crecer o disminuir en tamaño. A diferencia de los arreglos, las listas permiten agregar o quitar elementos fácilmente.</li>
+      </ul>
+      <center>
+        <img id="imagen" src="../imagenes/cecycerro2-removebg-preview.png" style="width: 200px;">
+      </center>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - CECyTEQ | TPROG Módulo I</p>
+  </footer>
+
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll('.seccion');
+      const imagen = document.getElementById('imagen');
+  
+      // Ocultar todas las secciones
+      secciones.forEach(sec => {
+        sec.style.display = 'none';
+      });
+  
+      // Mostrar la sección seleccionada
+      const activa = document.getElementById(id);
+      activa.style.display = 'block';
+  
+      // Reiniciar animación
+      activa.classList.remove("animando");
+      void activa.offsetWidth;
+      activa.classList.add("animando");
+  
+      // Ocultar la imagen si existe
+      if (imagen) {
+        imagen.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
